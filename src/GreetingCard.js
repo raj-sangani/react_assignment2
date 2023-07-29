@@ -1,5 +1,5 @@
-import './Card.css'
-function Card(props){
+import './GreetingCard.css'
+function GreetingCard(props){
     return(
         <div className="card">
             <h1>{props.name}</h1>
@@ -8,4 +8,4 @@ function Card(props){
     )
 }
 
-export default Card;
+export default GreetingCard;
