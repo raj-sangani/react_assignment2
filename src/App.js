@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Card from './Card'
 
 function App() {
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+      <input type="text" placeholder="Name" onChange={(e) => setName(e.target.value)} /><br/>
+      <input type="text" placeholder="Message" onChange={(e) => setMessage(e.target.value)} /><br/>
+      <Card name={name} message={message} />
     </div>
+    
   );
 }
 
